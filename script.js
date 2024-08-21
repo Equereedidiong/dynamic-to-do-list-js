@@ -22,7 +22,7 @@ document.addEventListener ('DOMContentLoaded', function (){
       textCreate.textContent = taskText.Value
       const removeButton = document.createElement('button')
       removeButton.textContent = Remove;
-      removeButton.className = remove-btn;
+      removeButton.classList.add (remove-btn);
       removeButton.onclick = function () {
 
         taskList.removeChild(textCreate)
