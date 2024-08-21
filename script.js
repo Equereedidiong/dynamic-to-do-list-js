@@ -39,7 +39,7 @@ document.addEventListener ('DOMContentLoaded', function (){
       });
 
       taskInput.addEventListener ('keypress', function () {
-        if (Event.key = 'Enter') {
+        if (event.key = 'Enter') {
           addTask();
         }
       });
