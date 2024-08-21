@@ -1,6 +1,6 @@
 //Setup Event lIstener for page load
 
-document.addEventListener ('DOMContentLoaded', function (){
+document.addEventListener ('DOMContentLoaded', function () {
 
   const addButton = document.getElementById('add-task-btn');
   const taskInput = document.getElementById('task-input');
@@ -38,7 +38,7 @@ document.addEventListener ('DOMContentLoaded', function (){
         addtask();
       });
 
-      taskInput.addEventListener ('keypress', function () {
+      taskInput.addEventListener ('keypresss', function () {
         if (event.key = 'Enter') {
           addTask();
         }
@@ -50,5 +50,23 @@ document.addEventListener ('DOMContentLoaded', function (){
     addTask ()
  });
 
+  // Initialize and Load Tasks:
+  const storedTasks = JSON.parse(localStorage.getItem('tasks') || '[]');
+  storedTasks.forEach(taskText => addTask (taskText, false));
+  
+  function addTask(taskText, save = true) {
+    // Task creation logic remains the same
+
+    if (save) {
+        const storedTasks = JSON.parse(localStorage.getItem('tasks') || '[]');
+        storedTasks.push(taskText);
+        localStorage.setItem('tasks', JSON.stringify(storedTasks));
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      loadTasks();
+      // Other initialization code
+    });
     
+  } 
 });
