@@ -47,7 +47,8 @@ document.addEventListener ('DOMContentLoaded', function (){
   }
     
  document.addEventListener ('DOMContentLoaded', function () {
-    addTask ();
- })
+    addTask ()
+ });
+
     
 });
