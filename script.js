@@ -9,8 +9,8 @@ document.addEventListener ('DOMContentLoaded', function (){
   // Create add task function
 
  addtask => {
-   let addTaskValue = addtask.Value
-      const taskText = addTaskValue.trim();
+   const taskInput = addtask.Value
+      const taskText = taskInput.Value.trim();
 
       if (!(taskText = '')) {
            alert ('Please enter a task');
